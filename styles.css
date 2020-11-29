@@ -1,0 +1,706 @@
+@font-face{
+    font-family: 'RobotoBold';
+    src: url(fonts/Roboto/Roboto-Bold.ttf);
+}
+
+@font-face{
+    font-family: 'Roboto';
+    src: url(fonts/Roboto/Roboto-Medium.ttf);
+}
+
+@media screen and (min-width:992px){
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        /* font-size: 100%; */
+        vertical-align: baseline;
+    }
+
+    body, html{
+        font-family: 'Roboto', Helvetica, sans-serif;
+        background-color: #131313;
+        color: white;
+        position: relative;
+        min-height: 100vh;
+    }
+
+    nav{
+        height: 3em;
+        background: linear-gradient(#2C2C2C, #131313,#151515);
+    }
+
+    nav ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex; 
+        justify-content: center;
+    }
+
+    nav li{
+        display: inline-block;
+        padding: 14px 16px;
+    }
+
+    .nav-link{
+        color:white;
+        text-shadow: 0 0 5px #fff;
+    }
+
+    .nav-link:hover{
+        text-shadow: 0 0 10px #fff;
+    }
+
+    /** Home Page **/
+    #hero-image {
+        background-image: url("images/vancouver.jpg");
+        height: 30em;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    #hero-text {
+        position: relative;
+        top: 15%;
+        left: 25%;
+        height: auto;
+        width: 50%;
+        background-color: rgba(0,0,0,0.8);
+    }
+
+    #hero-text p{
+        text-align: center;
+        color: white;
+        font-size: 200%;
+    }
+
+    #about-me{
+        height: 38em;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    #about-me-title{
+        width: 40%;
+        height: auto;
+    }
+
+    #about-me-title h1{
+        font-size: 12em;
+        border-top: 0.1em solid white;
+        border-bottom: 0.1em solid white;
+    }
+
+    #about-me-info{
+        position: relative;
+        right: 5%;
+    }
+
+    #about-me-info img{
+        position: relative;
+        right: 1.5em;
+        border: 1em dashed white;
+    }
+
+    #about-me-info p{
+        text-align: center;
+        width: 40em;
+        font-size: 0.85em;
+    }
+
+    /** COntact page **/
+    #contact-container{
+        background-image: url(images/contact.jpg);
+        height: 42em;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    #contact-me{
+        margin: auto;
+        width: 50%;
+        position: relative;
+        top: 4.5em;
+        font-size: 2em;
+        background-color: rgba(0,0,0,0.8);
+        padding: 1em;
+    }
+
+    #contact-me input{
+        width: 20em;
+        height: 2em;
+    }
+
+    #message{
+        margin-top: 0.5em;
+    }
+
+    /** work page **/
+    #work-background{
+        background-image: url(images/marble.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        height: 41em;
+    }
+    #work-container{
+        display: flex;
+        justify-content: space-between;
+        height: 40em;
+    }
+    #work1{
+        background-image: url(images/portfolio3.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        width: 33%;
+        margin: 1em;
+        box-shadow: 0 0 10px white;
+    }
+
+    #work2{
+        background-image: url(images/portfolio1.png);
+        width: 33%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        height: auto;
+        margin: 1em;
+        box-shadow: 0 0 10px white;
+    }
+
+    #work3{
+        background-image: url(images/portfolio2.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        width: 33%;
+        margin: 1em;
+        box-shadow: 0 0 10px white;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: white;
+    }
+
+    .overlay-text{
+        color: black;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    #work1:hover .overlay {
+        opacity: 1;
+    }
+
+    #work2:hover .overlay {
+        opacity: 1;
+    }
+
+    #work3:hover .overlay {
+        opacity: 1;
+    }
+    /**********/
+    footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-line{
+        background-color: white;
+        height: 0.5em;
+        margin: 0.25em;
+    }
+
+    footer p{
+        text-align: center;
+    }
+    .social-media{
+        padding-top: 0.5em;
+    }
+
+    .social-media a{
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+
+@media screen and (max-width:600px){
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        /* font-size: 100%; */
+        vertical-align: baseline;
+    }
+
+    body, html{
+        font-family: 'Roboto', Helvetica, sans-serif;
+        background-color: #131313;
+        color: white;
+        position: relative;
+        min-height: 100vh;
+    }
+
+    nav{
+        height: 3em;
+        background: linear-gradient(#2C2C2C, #131313,#151515);
+    }
+
+    nav ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex; 
+        justify-content: center;
+    }
+
+    nav li{
+        display: inline-block;
+        padding: 14px 16px;
+    }
+
+    .nav-link{
+        color:white;
+        text-shadow: 0 0 5px #fff;
+    }
+
+    .nav-link:hover{
+        text-shadow: 0 0 10px #fff;
+    }
+
+    /** Home Page **/
+    #hero-image {
+        background-image: url("images/vancouver.jpg");
+        height: 30em;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    #hero-text {
+        position: relative;
+        top: 15%;
+        left: 25%;
+        height: auto;
+        width: 50%;
+        background-color: rgba(0,0,0,0.8);
+    }
+
+    #hero-text p{
+        text-align: center;
+        color: white;
+        font-size: 200%;
+    }
+
+    #about-me{
+        height: 38em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    #about-me-title{
+        width: auto;
+        height: auto;
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+    }
+
+    #about-me-title h1{
+        text-align: center;
+        font-size: 3em;
+        border-top: 0.1em solid white;
+        border-bottom: 0.1em solid white;
+    }
+
+    #about-me-info{
+        width: auto;
+        height: auto;
+        margin: auto;
+        padding: 10px;
+    }
+
+    #about-me-info img{
+        border: 0.5em dashed white;
+    }
+
+    #about-me-info p{
+        text-align: center;
+        width: 40em;
+        font-size: 0.85em;
+    }
+
+    /** COntact page **/
+    #contact-container{
+        background-image: url(images/contact.jpg);
+        height: 38em;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    #contact-me{
+        margin: auto;
+        width: auto;
+        position: relative;
+        top: 4.5em;
+        font-size: 1em;
+        background-color: rgba(0,0,0,0.8);
+        padding: 1em;
+    }
+
+    #contact-me input{
+        width: 20em;
+        height: 2em;
+        margin-top: 0.5em;
+    }
+
+    #message{
+        margin-top: 0.5em;
+    }
+
+    /** work page **/
+    #work-background{
+        background-image: url(images/marble.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        height: 41em;
+    }
+    #work-container{
+        width: auto;
+        height: auto;
+        margin: auto;
+        padding: 10px;
+    }
+    #work1{
+        background-image: url(images/portfolio3.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        margin: 1em;
+        height: 12em;
+        box-shadow: 0 0 10px white;
+    }
+
+    #work2{
+        background-image: url(images/mobileportfolio4.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        margin: 1em;
+
+        height: 12em;
+        box-shadow: 0 0 10px white;
+    }
+
+    #work3{
+        background-image: url(images/mobileportfolio3.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        margin: 1em;
+        height: 12em;
+        box-shadow: 0 0 10px white;
+    }
+
+    .overlay-text{
+        color: white;
+        position: relative;
+        top: 8em;
+        text-align: center;
+        background-color: rgba(0,0,0,0.8);
+    }
+    /**********/
+    footer{
+        width: auto;
+        height: auto;
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+    }
+
+    /* .footer-line{
+        background-color: white;
+        height: 0.5em;
+        margin: 0.25em;
+    } */
+
+    footer p{
+        text-align: center;
+    }
+    .social-media{
+        padding-top: 0.5em;
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-media a{
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+}
+
+@media (min-width:600px) and (max-width:992px){
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        /* font-size: 100%; */
+        vertical-align: baseline;
+    }
+
+    body, html{
+        font-family: 'Roboto', Helvetica, sans-serif;
+        background-color: #131313;
+        color: white;
+        position: relative;
+        min-height: 100vh;
+    }
+
+    nav{
+        height: 3em;
+        background: linear-gradient(#2C2C2C, #131313,#151515);
+    }
+
+    nav ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex; 
+        justify-content: center;
+    }
+
+    nav li{
+        display: inline-block;
+        padding: 14px 16px;
+    }
+
+    .nav-link{
+        color:white;
+        text-shadow: 0 0 5px #fff;
+    }
+
+    .nav-link:hover{
+        text-shadow: 0 0 10px #fff;
+    }
+
+    /** Home Page **/
+    #hero-image {
+        background-image: url("images/vancouver.jpg");
+        height: 30em;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    #hero-text {
+        position: relative;
+        top: 15%;
+        left: 25%;
+        height: auto;
+        width: 50%;
+        background-color: rgba(0,0,0,0.8);
+    }
+
+    #hero-text p{
+        text-align: center;
+        color: white;
+        font-size: 200%;
+    }
+
+    #about-me{
+        height: 38em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    #about-me-title{
+        width: auto;
+        height: auto;
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+    }
+
+    #about-me-title h1{
+        text-align: center;
+        font-size: 3em;
+        border-top: 0.1em solid white;
+        border-bottom: 0.1em solid white;
+    }
+
+    #about-me-info{
+        width: auto;
+        height: auto;
+        margin: auto;
+        padding-left: 20%;
+    }
+
+    #about-me-info img{
+        border: 0.5em dashed white;
+    }
+
+    #about-me-info p{
+        text-align: center;
+        width: 40em;
+        font-size: 0.85em;
+    }
+
+    /** COntact page **/
+    #contact-container{
+        background-image: url(images/contact.jpg);
+        height: 38em;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    #contact-me{
+        margin: auto;
+        width: auto;
+        position: relative;
+        top: 4.5em;
+        font-size: 2em;
+        background-color: rgba(0,0,0,0.8);
+        padding: 1em;
+    }
+
+    #contact-me input{
+        width: 20em;
+        height: 2em;
+        margin-top: 0.5em;
+    }
+
+    #message{
+        margin-top: 0.5em;
+    }
+    
+    /** work page **/
+    #work-background{
+        background-image: url(images/marble.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        height: 41em;
+    }
+    #work-container{
+        display: flex;
+        justify-content: space-between;
+        height: 40em;
+    }
+    #work1{
+        background-image: url(images/portfolio3.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        width: 33%;
+        margin: 1em;
+        box-shadow: 0 0 10px white;
+    }
+
+    #work2{
+        background-image: url(images/portfolio1.png);
+        width: 33%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        height: auto;
+        margin: 1em;
+        box-shadow: 0 0 10px white;
+    }
+
+    #work3{
+        background-image: url(images/portfolio2.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        width: 33%;
+        margin: 1em;
+        box-shadow: 0 0 10px white;
+    }
+
+    .overlay-text{
+        color: white;
+        position: relative;
+        top: 32em;
+        text-align: center;
+        background-color: rgba(0,0,0,0.8);
+    } 
+
+    footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-line{
+        background-color: white;
+        height: 0.5em;
+        margin: 0.25em;
+    }
+
+    footer p{
+        text-align: center;
+    }
+    .social-media{
+        padding-top: 0.5em;
+    }
+
+    .social-media a{
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
